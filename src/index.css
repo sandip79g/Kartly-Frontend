@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body bg-gray-100 text-gray-900;
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .print-report,
+  .print-report * {
+    visibility: visible;
+  }
+
+  .print-report {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  header,
+  footer,
+  aside,
+  nav,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7ccd1;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  @apply bg-amber hover:bg-amber-dark text-navy-dark font-semibold px-4 py-2 rounded-md transition-colors shadow-sm;
+}
+.btn-secondary {
+  @apply bg-navy hover:bg-navy-light text-white font-semibold px-4 py-2 rounded-md transition-colors;
+}
+.input-field {
+  @apply w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent;
+}
+.card {
+  @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow;
+}
