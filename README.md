@@ -20,7 +20,7 @@ The project is intended as a **research/evaluation prototype**, not a production
 
 The accompanying Google Colab notebook can be used for the project's research and evaluation workflow:
 
-**[Open the Kartly Google Colab Notebook](https://colab.research.google.com/drive/1BL52_LGpELWkLfpPHCaguQtJ3kEfVOaB?authuser=3#scrollTo=ef5f6abf)**
+**[Open PIS Data collection ](https://colab.research.google.com/drive/1BL52_LGpELWkLfpPHCaguQtJ3kEfVOaB?authuser=3#scrollTo=ef5f6abf)**
 
 ---
 
@@ -36,7 +36,8 @@ The main storefront provides category navigation, product search, sorting, ratin
 
 The prototype also includes an AI shopping-assistant interface for product-related interaction and recommendation support.
 
-![Kartly AI shopping assistant](screenshots/ai-shopping-assistant.png)
+![Kartly AI shopping assistant](frontend\Kartly Screenshot\With AI chatbot.png)
+<img src="frontend\Kartly Screenshot\With AI chatbot.png" alt="Chatbot" width="500" height="600">
 
 ### Customer Storefront
 
