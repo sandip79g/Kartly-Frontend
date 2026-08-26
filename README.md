@@ -32,6 +32,9 @@ The main storefront provides category navigation, product search, sorting, ratin
 
 ![Kartly storefront](screenshots/storefront.png)
 
+Kartly Screenshot/Screenshot 2026-08-26 132425.png
+
+
 ### AI Shopping Assistant
 
 The prototype also includes an AI shopping-assistant interface for product-related interaction and recommendation support.
