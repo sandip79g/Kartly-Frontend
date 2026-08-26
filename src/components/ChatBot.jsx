@@ -9,6 +9,7 @@ const ChatBot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const messagesEndRef = useRef(null);
 
@@ -91,6 +92,22 @@ const ChatBot = () => {
         }
     };
 
+    if (!isOpen) {
+        return (
+            <button
+                type="button"
+                className="chatbot-launcher"
+                onClick={() => setIsOpen(true)}
+                aria-label="Open shopping assistant"
+            >
+                <span className="chatbot-launcher-icon" aria-hidden="true">
+                    AI
+                </span>
+                <span>ASK ME</span>
+            </button>
+        );
+    }
+
     return (
         <div className="chatbot">
             {/* Header */}
@@ -107,6 +124,16 @@ const ChatBot = () => {
                         Online
                     </div>
                 </div>
+
+                <button
+                    type="button"
+                    className="chatbot-minimize"
+                    onClick={() => setIsOpen(false)}
+                    aria-label="Minimize shopping assistant"
+                    title="Minimize chat"
+                >
+                    <span aria-hidden="true">−</span>
+                </button>
             </div>
 
             {/* Messages */}
