@@ -13,7 +13,7 @@
 ## Overview
 
 Kartly is a marketplace-style e-commerce prototype designed to demonstrate a complete shopping workflow in a controlled evaluation environment. It includes a customer-facing storefront, authentication, shopping cart, order handling, user account settings, an administrator dashboard, product and customer management, and sales reporting.
-
+Kartly Screenshot/Customer pannel.png
 The project is intended as a **research/evaluation prototype**, not a production commerce platform. No real payment processing is performed.
 
 ### Research / Evaluation Notebook
@@ -31,6 +31,9 @@ The accompanying Google Colab notebook can be used for the project's research an
 The main storefront provides category navigation, product search, sorting, ratings, pricing, and quick access to the shopping cart and account area.
 
 ![Kartly storefront](screenshots/storefront.png)
+
+Kartly Screenshot/Screenshot 2026-08-26 132425.png
+
 
 ### AI Shopping Assistant
 
