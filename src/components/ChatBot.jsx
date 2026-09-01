@@ -6,19 +6,88 @@ import "./ChatBot.css";
 const ChatBot = () => {
     const { user } = useAuth();
 
+    const modelNames = [
+        "qwen3.5:0.8b",
+        "llama3.2:1b"
+    ];
+
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
+    const [modelName, setModelName] = useState(modelNames[0]);
     const [loading, setLoading] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     const messagesEndRef = useRef(null);
+    // Tracks whether the next messages update is the initial history load,
+    // so we can scroll instantly instead of "smooth" (which can get cut
+    // short when a large batch of messages is inserted all at once).
+    const isInitialLoadRef = useRef(true);
 
-    // Scroll to newest message whenever messages change
-    useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({
-            behavior: "smooth"
+    const loadChatHistory = async () => {
+        if (!user?.id) return;
+
+        isInitialLoadRef.current = true;
+
+        const messages = await fetch("/api/bot/history/" + user?.id, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
         });
+
+        if (messages.ok) {
+            const data = await messages.json();
+            console.log("Loaded chat history:", data);
+
+            // change the data message column to content for each message
+            const formattedMessages = (data.history || []).map(msg => ({
+                role: msg.role,
+                content: msg.message
+            }));
+            setMessages(formattedMessages);
+        }
+    };
+
+    useEffect(() => {
+        loadChatHistory();
+    }, [user?.id]);
+
+    // Scroll to newest message whenever messages change (including the
+    // initial history load).
+    useEffect(() => {
+        if (messages.length === 0) return;
+
+        if (isInitialLoadRef.current) {
+            // Wait for the browser to actually paint the newly-rendered
+            // messages before scrolling, and jump instantly (no animation)
+            // so it lands reliably at the bottom even for long histories.
+            requestAnimationFrame(() => {
+                messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+            });
+            isInitialLoadRef.current = false;
+        } else {
+            messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
     }, [messages, loading]);
+
+    // The chat window starts closed, so `.chat-messages` (and
+    // messagesEndRef) doesn't exist in the DOM yet when history loads in
+    // the background. When the user opens the chat, jump to the bottom
+    // once the container has actually mounted and painted.
+    useEffect(() => {
+        if (!isOpen || messages.length === 0) return;
+
+        requestAnimationFrame(() => {
+            messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+        });
+    }, [isOpen]);
+
+    const handleModelChange = () => {
+        const currentIndex = modelNames.indexOf(modelName);
+        const nextIndex = (currentIndex + 1) % modelNames.length;
+
+        setModelName(modelNames[nextIndex]);
+    };
 
     const handleSend = async () => {
         const trimmedMessage = input.trim();
@@ -49,7 +118,8 @@ const ChatBot = () => {
                 },
                 body: JSON.stringify({
                     user_id: user?.id || null,
-                    messages: updatedMessages
+                    messages: updatedMessages,
+                    model_name: modelName
                 })
             });
 
@@ -122,6 +192,20 @@ const ChatBot = () => {
                     <div className="chatbot-status">
                         <span className="status-dot"></span>
                         Online
+                    </div>
+
+                    <div className="chatbot-model-switcher" aria-live="polite">
+                        <span className="chatbot-model-label">Model</span>
+
+                        <button
+                            type="button"
+                            className="chatbot-model-button"
+                            onClick={handleModelChange}
+                            aria-label={`Switch AI model. Current model: ${modelName}`}
+                            title="Switch model"
+                        >
+                            {modelName}
+                        </button>
                     </div>
                 </div>
 
