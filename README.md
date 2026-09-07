@@ -52,7 +52,7 @@ A logged-in customer can browse products while retaining access to account featu
 
 Users can authenticate through a dedicated sign-in page before accessing account-specific features.
 
-![Kartly login page](screenshots/login.png)
+![Kartly login page](./Kartly%20Screenshot/Login%20page.png)
 
 ### Shopping Cart
 
