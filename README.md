@@ -1,4 +1,4 @@
-# Kartly — E-Commerce Prototype
+#                                Kartly — E-Commerce Prototype
 
 <p align="center">
   A full-stack e-commerce prototype built for evaluation and research, featuring product discovery, authentication, cart and checkout flows, user account management, admin tooling, sales reporting, and an AI shopping-assistant interface.
