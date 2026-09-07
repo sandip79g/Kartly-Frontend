@@ -70,7 +70,7 @@ Registered users can manage profile information, profile imagery, email details,
 
 Administrators can monitor key platform metrics such as customer count, product count, order count, and total revenue.
 
-![Kartly admin dashboard](screenshots/admin-dashboard.png)
+![Kartly admin dashboard](./Kartly%20Screenshot/admin%20pannel.png)
 
 ### Sales Reporting
 
