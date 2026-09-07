@@ -64,7 +64,7 @@ The cart provides a focused shopping state and supports the customer journey fro
 
 Registered users can manage profile information, profile imagery, email details, and password changes.
 
-![Kartly account settings](screenshots/account-settings.png)
+![Kartly account settings](./Kartly%20Screenshot/useraccount%20setting.png)
 
 ### Admin Dashboard
 
