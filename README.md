@@ -46,7 +46,7 @@ The prototype also includes an AI shopping-assistant interface for product-relat
 
 A logged-in customer can browse products while retaining access to account features and the assistant interface.
 
-![Kartly customer storefront](screenshots/customer-storefront.png)
+![Kartly customer storefront](./Kartly%20Screenshot/Customer%20pannel.png)
 
 ### Sign In
 
