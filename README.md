@@ -40,7 +40,7 @@ Kartly Screenshot/Screenshot 2026-08-26 132425.png
 The prototype also includes an AI shopping-assistant interface for product-related interaction and recommendation support.
 
 ![Kartly AI shopping assistant](./Kartly%20Screenshot/With%20AI%20chatbot.png)
-<img src="frontend\Kartly Screenshot\With AI chatbot.png" alt="Chatbot" width="500" height="600">
+
 
 ### Customer Storefront
 
