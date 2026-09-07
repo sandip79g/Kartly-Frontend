@@ -30,7 +30,7 @@ The accompanying Google Colab notebook can be used for the project's research an
 
 The main storefront provides category navigation, product search, sorting, ratings, pricing, and quick access to the shopping cart and account area.
 
-![Kartly storefront](./Kartly%20Screenshot/admin%20pannel.png)
+![Kartly storefront](./Kartly%20Screenshot/Screenshot%202026-08-26%20132425.png)
 
 Kartly Screenshot/Screenshot 2026-08-26 132425.png
 
