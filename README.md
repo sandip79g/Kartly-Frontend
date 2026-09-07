@@ -132,11 +132,13 @@ The sales view provides revenue summaries, sold-item counts, payment-method brea
 | Routing | React Router |
 | Styling | Tailwind CSS |
 | Backend | Node.js, Express |
-| Database | SQLite with `better-sqlite3` |
+| Database | SQLite with `better-sqlite3` / `PostGreSQL` |
+| RAG | with `Customer-support`|
 | Authentication | JWT + bcrypt |
 | Access Control | Role-based access (`user` / `admin`) |
 | Local Development | Vite dev server + Express API |
 | Research / Evaluation | Google Colab notebook |
+
 
 ---
 
