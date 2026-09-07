@@ -58,7 +58,7 @@ Users can authenticate through a dedicated sign-in page before accessing account
 
 The cart provides a focused shopping state and supports the customer journey from product selection toward checkout.
 
-![Kartly shopping cart](screenshots/cart.png)
+![Kartly shopping cart](./Kartly%20Screenshot/cart.png)
 
 ### Account Settings
 
