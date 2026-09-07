@@ -76,7 +76,7 @@ Administrators can monitor key platform metrics such as customer count, product 
 
 The sales view provides revenue summaries, sold-item counts, payment-method breakdowns, recent orders, and daily trend visualisations.
 
-![Kartly sales dashboard](screenshots/admin-sales.png)
+![Kartly sales dashboard](./Kartly%20Screenshot/Sales.png)
 
 ---
 
