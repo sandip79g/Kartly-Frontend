@@ -20,8 +20,10 @@ The project is intended as a **research/evaluation prototype**, not a production
 
 The accompanying Google Colab notebook can be used for the project's research and evaluation workflow:
 
-**[Open PIS Data collection ](https://colab.research.google.com/drive/1BL52_LGpELWkLfpPHCaguQtJ3kEfVOaB?authuser=3#scrollTo=ef5f6abf)**
+<p align="center">
 
+**[Open PIS Data collection ](https://colab.research.google.com/drive/1BL52_LGpELWkLfpPHCaguQtJ3kEfVOaB?authuser=3#scrollTo=ef5f6abf)**
+</p>
 ---
 
 ## Screenshots
