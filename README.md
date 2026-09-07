@@ -32,7 +32,7 @@ The main storefront provides category navigation, product search, sorting, ratin
 
 ![Kartly storefront](./Kartly%20Screenshot/Screenshot%202026-08-26%20132425.png)
 
-Kartly Screenshot/Screenshot 2026-08-26 132425.png
+
 
 
 ### AI Shopping Assistant
