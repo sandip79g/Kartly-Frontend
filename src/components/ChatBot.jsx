@@ -39,7 +39,6 @@ const ChatBot = () => {
             const data = await messages.json();
             console.log("Loaded chat history:", data);
 
-            // change the data message column to content for each message
             const formattedMessages = (data.history || []).map(msg => ({
                 role: msg.role,
                 content: msg.message

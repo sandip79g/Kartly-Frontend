@@ -4,6 +4,7 @@ import api from "../api/axios.js";
 import { useCart } from "../context/CartContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { formatPound } from "../utils/currency.js";
+import ChatBot from "../components/ChatBot.jsx";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -165,6 +166,10 @@ export default function ProductDetail() {
           </div>
           {added && <p className="text-sm text-teal mt-3">Added to cart ✓</p>}
         </div>
+      </div>
+
+      <div className="fixed bottom-4 right-4 z-50">
+        <ChatBot />
       </div>
 
       <div className="mt-10 grid lg:grid-cols-2 gap-6">

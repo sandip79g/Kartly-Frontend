@@ -4,6 +4,7 @@ import { useCart } from "../context/CartContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { formatPound } from "../utils/currency.js";
 import { avatarUrlFor } from "../utils/avatar.js";
+import ChatBot from "../components/ChatBot.jsx";
 
 export default function Cart() {
   const { items, updateQuantity, removeItem, total } = useCart();
@@ -88,6 +89,10 @@ export default function Cart() {
           Proceed to checkout
         </button>
       </div>
+
+      <div className="fixed bottom-4 right-4 z-50">
+        <ChatBot />
+      </div>
     </div>
   );
-}
+} 
